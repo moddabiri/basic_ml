@@ -36,9 +36,14 @@
     <Folder Include="machine_learning\neural_networks\" />
     <Folder Include="machine_learning\regression\" />
     <Folder Include="ml_util\" />
+    <Folder Include="sample_data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Documentation\StartDevelopment.txt" />
+    <Content Include="LICENSE" />
+    <Content Include="README.md" />
+    <Content Include="sample_data\classification_data.csv" />
+    <Content Include="sample_data\data.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="machine_learning\CostMinimizationAlgorithms.py" />
@@ -59,6 +64,9 @@
     <Compile Include="ml_util\LargeMatrix.py" />
     <Compile Include="ml_util\math_helpers.py" />
     <Compile Include="ml_util\__init__.py" />
+    <Compile Include="samples.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
   <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />

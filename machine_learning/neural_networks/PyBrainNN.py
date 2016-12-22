@@ -1,4 +1,12 @@
-﻿from pybrain.datasets import SupervisedDataSet
+﻿__author__ = "Mohammad Dabiri"
+__copyright__ = "Free to use, copy and modify"
+__credits__ = ["Mohammad Dabiri"]
+__license__ = "MIT Licence"
+__version__ = "0.0.1"
+__maintainer__ = "Mohammad Dabiri"
+__email__ = "moddabiri@yahoo.com"
+
+from pybrain.datasets import SupervisedDataSet
 from pybrain.tools.shortcuts import buildNetwork
 from pybrain.supervised.trainers import BackpropTrainer
 from pybrain.structure.modules import LinearLayer

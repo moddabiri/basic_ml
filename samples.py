@@ -1,3 +1,21 @@
+﻿__author__ = "Mohammad Dabiri"
+__copyright__ = "Free to use, copy and modify"
+__credits__ = ["Mohammad Dabiri"]
+__license__ = "MIT Licence"
+__version__ = "0.0.1"
+__maintainer__ = "Mohammad Dabiri"
+__email__ = "moddabiri@yahoo.com"
+
+import os.path
+import ml_util.math_helpers as mathhlp
+import numpy as np
+import datetime
+
+from machine_learning.regression.LinearRegression import LinearRegression
+from machine_learning.regression.LogisticRegression import LogisticRegression
+from machine_learning.CostMinimizationAlgorithms import CostMinimizationAlgorithms
+from machine_learning.regression.VectorizedLogisticRegression import VectorizedLogisticRegression
+
 data_path = "sample_data/data.txt";
 classification_data_path = "sample_data/classification_data.csv";
 
@@ -91,3 +109,6 @@ def feature_mapping():
     gd.mappingDegree = 6
     result = gd.map_features()
     #TODO:Finish
+
+if __name__ == "__main__":
+    gradientdescent_load_data()
