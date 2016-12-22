@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>25cfa5eb-9d24-4205-bb23-e12319d61987</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>basic_ml</Name>
+    <RootNamespace>basic_ml</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Documentation\" />
+    <Folder Include="machine_learning\" />
+    <Folder Include="machine_learning\neural_networks\" />
+    <Folder Include="machine_learning\regression\" />
+    <Folder Include="ml_util\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentation\StartDevelopment.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="machine_learning\CostMinimizationAlgorithms.py" />
+    <Compile Include="machine_learning\CostMinimizerBase.py" />
+    <Compile Include="machine_learning\LearnerBase.py" />
+    <Compile Include="machine_learning\neural_networks\NeuralNetworkBase.py" />
+    <Compile Include="machine_learning\neural_networks\PyBrainNN.py" />
+    <Compile Include="machine_learning\neural_networks\TensorFLow.py" />
+    <Compile Include="machine_learning\neural_networks\__init__.py" />
+    <Compile Include="machine_learning\NormalEquation.py" />
+    <Compile Include="machine_learning\regression\LinearRegression.py" />
+    <Compile Include="machine_learning\regression\LogisticRegression.py" />
+    <Compile Include="machine_learning\regression\VectorizedLogisticRegression.py" />
+    <Compile Include="machine_learning\regression\__init__.py" />
+    <Compile Include="machine_learning\__init__.py" />
+    <Compile Include="ml_util\file_utility.py" />
+    <Compile Include="ml_util\functional_utility.py" />
+    <Compile Include="ml_util\LargeMatrix.py" />
+    <Compile Include="ml_util\math_helpers.py" />
+    <Compile Include="ml_util\__init__.py" />
+  </ItemGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
